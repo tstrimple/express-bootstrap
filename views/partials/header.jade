@@ -9,13 +9,13 @@ header
           span.icon-bar
         a(href="/").navbar-brand brand here
       #primary-nav.collapse.navbar-collapse
-        mixin navigation(links)
-          ul.nav.navbar-nav
-            each link in links
-              li(class=key === link.key ? 'active' : '')
-                a(href=link.url)= link.name
-        - var links = [{ name: 'link 1', url: '/link1', key: 'page1' }, { name: 'link 2', url: '/link2', key: 'page2' }];
-        +navigation(links)
+        ul.nav.navbar-nav
+          mixin navlink(name, url, navkey)
+            li(class=key === navkey ? 'active' : '')
+              a(href=url)= name
+          +navlink('home', '/', 'home')
+          +navlink('images', '/images', 'images')
+          +navlink('containers', '/containers', 'containers')
         ul.nav.navbar-nav.navbar-right
           li.dropdown
             a(href='#', data-toggle='dropdown').dropdown-toggle

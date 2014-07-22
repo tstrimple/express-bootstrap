@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res) {
-  res.render('home/index.jade', { key: 'page1', title: 'Express' });
+  res.render('home/index.jade', { key: 'home', title: 'Express' });
 });
 
 module.exports = router;
