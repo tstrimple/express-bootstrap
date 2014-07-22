@@ -1,0 +1,27 @@
+header
+  nav.navbar.navbar-default
+    .container-fluid
+      .navbar-header
+        button(type='button', data-toggle='toggle', data-target='#primary-nav').navbar-toggle
+          span.sr-only toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a(href="/").navbar-brand brand here
+      #primary-nav.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li
+            a(href='#1') link 1
+          li
+            a(href='#2') link 2
+        ul.nav.navbar-nav.navbar-right
+          li.dropdown
+            a(href='#', data-toggle='dropdown').dropdown-toggle
+              span timothy strimple
+              span.caret
+            ul(role='menu').dropdown-menu
+              li
+                a(href='/account') manage account
+              li.divider
+                li
+                  a(href='/auth/signout') sign out

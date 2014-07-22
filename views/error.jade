@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  .container-fluid
+    .page-header
+      h1 #{message} <small>#{error.status}</small>
+    pre #{error.stack}
